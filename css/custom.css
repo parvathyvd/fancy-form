@@ -1,0 +1,91 @@
+@import url("https://fonts.googlepapis.com/css?family=Pacifico|Roboto");
+body {
+  background: #428bca;
+  font-family: 'Roboto',sans-serif; }
+
+h1.logo {
+  color: #fff;
+  font-family: 'Pacificio',cursive;
+  text-align: center; }
+
+h1.end {
+  position: relative;
+  opacity: 0;
+  color: #fff; }
+
+#form-box {
+  display: flex;
+  width: 30%;
+  background: #fff;
+  padding: 3rem 5rem;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease-in-out; }
+
+#form-box.close {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: 0.8s ease-in-out; }
+
+.close #next-btn, .close #prev-btn {
+  color: #fff; }
+
+#prev-btn {
+  position: absolute;
+  left: 1rem;
+  top: 1rem; }
+
+#next-btn {
+  position: absolute;
+  color: #428bca;
+  top: 2.5rem;
+  right: 3rem;
+  font-size: 2rem;
+  cursor: pointer; }
+  #next-btn:hover {
+    color: #b9d4ec; }
+
+#input-group {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; }
+  #input-group input {
+    width: 100%;
+    border: none;
+    font-size: 1.3rem;
+    outline: 0;
+    box-shadow: none; }
+  #input-group #input-label {
+    position: relative;
+    pointer-events: none;
+    left: 0rem;
+    top: -1rem;
+    transition: all .3s ease-in-out; }
+  #input-group input:valid + #input-label {
+    top: -3.5rem;
+    left: -.5rem;
+    margin-left: -2rem;
+    font-size: 0.9rem;
+    color: #666; }
+
+#input-progress {
+  border-bottom: 0.2rem solid #428bca;
+  width: 0;
+  transition: all 0.1s ease-in-out; }
+
+#progress-bar {
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  background: #b9d4ec;
+  height: 1rem;
+  width: 0;
+  transition: width 0.5s ease-in-out; }
+
+.error #next-btn {
+  color: red; }
+
+.error #input-progress {
+  border-bottom: 0.2rem solid red; }
